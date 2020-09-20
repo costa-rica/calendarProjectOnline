@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!-- https://www.w3schools.com/howto/howto_css_calendar.asp -->
+<html lang="en">
+<head>
+    <!--<link rel="stylesheet" href="styles.css">-->
+    <meta charset="UTF-8">
+    <title>Testing how CSS works</title>
+    <!-- put css definitions here -->
+    <style>
+        ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+/* Month header */
+.month {
+  padding: 70px 25px;
+  width: 100%;
+  background: IndianRed;
+  text-align: center;
+}
+
+/* Month list */
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* Previous button inside month header */
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+/* Next button */
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color:#ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+/* Highlight the "current" day */
+.days li .active {
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important
+}
+
+    </style>
+    <!-- end css definitions  -->
+</head>
+<body>
+Does this do anything?
+
+<div class="month">
+    <ul>
+        <li class="prev">&#10094;</li>
+        <li class="next">&#10095;</li>
+        <li>September<br><span style="font-size:18px">2020</span></li>
+    </ul>
+</div>
+
+<ul class="weekdays">
+    <li>Tu</li>
+    <li>We</li>
+    <li>Th</li>
+    <li>Fr</li>
+    <li>Sa</li>
+    <li>Su</li>
+    <li>Mo</li>
+</ul>
+
+<ul class="days">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li><span class="active">10</span></li>
+    <li>11</li>
+    <li>12</li>
+    <li>13</li>
+    <li>14</li>
+    <li>15</li>
+    <li>16</li>
+    <li>17</li>
+    <li>18</li>
+    <li>19</li><!--spaces in html scripting don't always seem to have an impact-->
+    <li><span class="active">20</span></li>
+    ...etc
+</ul>
+<br/>
+Go to <a href="about.html"> about page <a/>
+    <br/><br/>
+    Below are a couple things I was thinking we could add...<br/>
+    <i>1. link to about page doesn't seem to work when running from python/flask (views.py) but does work when we run striaght from the browser.
+    Why? Can you fix that?<br/>
+        2. Add a link to the home page.</i>
+
+</body>
+</html>
